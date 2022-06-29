@@ -1,4 +1,4 @@
- 
+import java.util.Locale;
 
 public class LoopFun
 {
@@ -10,7 +10,11 @@ public class LoopFun
        * @return the factorial of the number
        */
       public Integer factorial(Integer number){
-          return null;
+          Integer factorial = 1;
+          for (int i = 2; i <= number; i++) {
+              factorial *= i;
+          }
+          return factorial;
       }
 
       /**
@@ -21,13 +25,19 @@ public class LoopFun
        * @return Upper case string of the first letter of each word
        */
       public String acronym(String phrase) {
-          return null;
+          String acronym = phrase.substring(0,1).toUpperCase();
+          for (int i = 1; i < phrase.length() - 1; i++) {
+              if (phrase.charAt(i) == ' ') {
+                  acronym += phrase.substring(i+1, i+2).toUpperCase();
+              }
+          }
+          return acronym;
       }
 
       /**
        * To prevent anyone from reading our messages, we can encrypt it so it will only be readable by its
        * intended audience. This method encrypt the message by shifting the letter by 3 characters. If the character is
-       * at the end of the alphabet, it will wraps around.
+       * at the end of the alphabet, it wraps around.
        * For example:
        *  'a' => 'd'
        *  'w' => 'z'
@@ -37,6 +47,6 @@ public class LoopFun
        * @return the encrypted string by shifting each character by three character
        */
       public String encrypt(String word) {
-          return null;
+
       }
 }
