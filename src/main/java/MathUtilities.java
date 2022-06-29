@@ -37,7 +37,10 @@ public class MathUtilities{
    * @return true if the number is odd, false if it is even
    */
   public Boolean isOdd(Integer number){
-      return null;
+      if (number % 2 != 0) {
+          return true;
+      }
+      return false;
   }
 
 
@@ -47,7 +50,7 @@ public class MathUtilities{
    * @return the result of the number multiply by itself
    */
   public Integer square(Integer number) {
-      return null;
+      return number * number;
   }
 
 }
