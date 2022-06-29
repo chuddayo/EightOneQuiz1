@@ -52,6 +52,11 @@ public class StringUtilities {
      * @return last `word` in sentence
      */
     public String getLastWord(String sentence) {
-        return null;
+        for (int i = sentence.length() - 2; i >= 0; i--) {
+            if (sentence.charAt(i) == ' ') {
+                return sentence.substring(i+1);
+            }
+        }
+        return sentence;
     }
 }
