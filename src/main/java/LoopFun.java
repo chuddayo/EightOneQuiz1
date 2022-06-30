@@ -15,6 +15,7 @@ public class LoopFun
               factorial *= i;
           }
           return factorial;
+//          return (number == 1) || (number == 0) ? 1 : number * factorial(number - 1);
       }
 
       /**
@@ -32,6 +33,11 @@ public class LoopFun
               }
           }
           return acronym;
+//          String[] acronym = phrase.split(" ");
+//          iterate over acronym and build all caps acronym
+//            kris demo'ed enhanced for to iterate
+//          kris put result.toUpperCase in return statment!
+
       }
 
       /**
@@ -52,9 +58,7 @@ public class LoopFun
           for (int i = 0; i < word.length(); i++) {
               int index = alphabet.indexOf(word.charAt(i));
               index += 3;
-              if (index > 25) {
-                  index -= 26;
-              }
+              index %= 26;
               encryptedWord.append(alphabet.charAt(index));
           }
           return encryptedWord.toString();
